@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Shield</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🛡️ Privacy Shield</h1>
+      <p class="subtitle">Tracker Blocker</p>
+    </header>
+
+    <div class="stats-section">
+      <div class="main-stat">
+        <div class="stat-number" id="totalBlocked">0</div>
+        <div class="stat-label">Trackers Blocked on This Page</div>
+      </div>
+
+      <div class="category-stats">
+        <h3>Blocked by Category</h3>
+        <div class="category-list">
+          <div class="category-item">
+            <span class="category-name">📢 Advertising</span>
+            <span class="category-count" id="advertising">0</span>
+          </div>
+          <div class="category-item">
+            <span class="category-name">📊 Analytics</span>
+            <span class="category-count" id="analytics">0</span>
+          </div>
+          <div class="category-item">
+            <span class="category-name">👥 Social Media</span>
+            <span class="category-count" id="social">0</span>
+          </div>
+          <div class="category-item">
+            <span class="category-name">🔍 Fingerprinting</span>
+            <span class="category-count" id="fingerprinting">0</span>
+          </div>
+          <div class="category-item">
+            <span class="category-name">📡 Beacons</span>
+            <span class="category-count" id="beacons">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="global-stats">
+        <h3>Global Statistics</h3>
+        <div class="global-stat-item">
+          <span>Total Blocked:</span>
+          <strong id="globalTotal">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="openOptions" class="btn btn-primary">
+        ⚙️ Settings
+      </button>
+      <button id="refreshStats" class="btn btn-secondary">
+        🔄 Refresh
+      </button>
+    </div>
+
+    <footer>
+      <p>Protecting your privacy, one tracker at a time</p>
+    </footer>
+  </div>
+
+  <script src="scripts/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Shield - Settings</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🛡️ Privacy Shield Settings</h1>
+      <p>Configure your privacy protection preferences</p>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>📊 Statistics Overview</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="totalBlockedStat">0</div>
+            <div class="stat-label">Total Trackers Blocked</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="adsStat">0</div>
+            <div class="stat-label">Advertising Trackers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="analyticsStat">0</div>
+            <div class="stat-label">Analytics Trackers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="socialStat">0</div>
+            <div class="stat-label">Social Media Trackers</div>
+          </div>
+        </div>
+        <button id="resetStats" class="btn btn-danger">Reset All Statistics</button>
+      </section>
+
+      <section class="section">
+        <h2>⚙️ Blocking Categories</h2>
+        <p class="section-desc">Enable or disable blocking for specific tracker categories</p>
+        
+        <div class="toggle-list">
+          <div class="toggle-item">
+            <div class="toggle-info">
+              <strong>📢 Advertising Trackers</strong>
+              <p>Block ad networks and marketing trackers</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleAdvertising" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-item">
+            <div class="toggle-info">
+              <strong>📊 Analytics Trackers</strong>
+              <p>Block analytics and measurement scripts</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleAnalytics" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-item">
+            <div class="toggle-info">
+              <strong>👥 Social Media Trackers</strong>
+              <p>Block social media tracking pixels</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleSocial" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-item">
+            <div class="toggle-info">
+              <strong>🔍 Fingerprinting Scripts</strong>
+              <p>Block device fingerprinting attempts</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleFingerprinting" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-item">
+            <div class="toggle-info">
+              <strong>📡 Tracking Beacons</strong>
+              <p>Block tracking beacons and pixels</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleBeacons" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>✅ Whitelist</h2>
+        <p class="section-desc">Allow tracking on specific domains you trust</p>
+        
+        <div class="input-group">
+          <input type="text" id="whitelistInput" placeholder="example.com">
+          <button id="addWhitelist" class="btn btn-primary">Add to Whitelist</button>
+        </div>
+        
+        <div class="domain-list" id="whitelistDomains">
+          <!-- Whitelist domains will be populated here -->
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>🚫 Blacklist</h2>
+        <p class="section-desc">Block additional domains not in our default list</p>
+        
+        <div class="input-group">
+          <input type="text" id="blacklistInput" placeholder="tracker.example.com">
+          <button id="addBlacklist" class="btn btn-primary">Add to Blacklist</button>
+        </div>
+        
+        <div class="domain-list" id="blacklistDomains">
+          <!-- Blacklist domains will be populated here -->
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>ℹ️ About</h2>
+        <div class="about-content">
+          <p><strong>Privacy Shield v1.0.0</strong></p>
+          <p>A privacy-focused browser extension that blocks tracking scripts and protects your online privacy.</p>
+          <p>This extension uses declarativeNetRequest API for efficient, high-performance tracker blocking.</p>
+          <br>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Real-time tracker blocking</li>
+            <li>Categorized blocking (ads, analytics, social, etc.)</li>
+            <li>Customizable whitelist and blacklist</li>
+            <li>Detailed statistics and analytics</li>
+            <li>Low memory and CPU footprint</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/options.js"></script>
+</body>
+</html>
